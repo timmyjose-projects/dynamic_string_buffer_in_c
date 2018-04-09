@@ -5,6 +5,7 @@ A growable (and shrinkable) string buffer implementation in C. This is meant for
 
 ## Sample Run
 
+```
 bash-3.2$ !m
 make clean && make && ./main
 rm -rf *.o
