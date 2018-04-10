@@ -213,6 +213,13 @@ void free_str_buf(str_buf *sb)
 {
   if (sb) {
     if (sb->buf) {
+      for (size_t i = 0; i < sb->len; i++) {
+        if (sb->buf[i]) {
+          free(sb->buf[i]);
+          sb->buf[i] = NULL;
+        }
+      }
+        
       free(sb->buf);
       sb->buf = NULL;
     }
